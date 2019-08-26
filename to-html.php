@@ -68,7 +68,7 @@ for ($a = 1; $a < count($argv); $a++) {
 			fwrite($file, "\n##~~Do not edit this line." . $info['line'] . "~~##\n");
 			$lastLine = $info['line'];
 		}
-		fwrite($file, $info['pre'] . htmlentities($info['master']) . $info['post']);
+		fwrite($file, $info['pre'] . ($info['translation']) . $info['post']);
 	}
 	fclose($file);
 
